@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <title>{block:PostTitle}{PostTitle} | {/block:PostTitle}{Title}</title>
+    <link rel="shortcut icon" href="{Favicon}">
+    <link rel="alternate" type="application/rss+xml" href="{RSS}">
+    {block:Description}
+      <meta name="description" content="{MetaDescription}" />
+    {/block:Description}
+    <style type="text/css">
+      {bootstrapcss}
+      {prettycss}
+      {customcss}
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="page-header">
+        <form id="search-form" action="/search" method="get">
+          <input type="text" placeholder="Search" name="q">
+        </form>
+        <h1><a href="/">{Title}</a></h1>
+      </div>
+
+      <div id="page-content">
+        {block:SearchPage}
+          <div class="post-box">
+            <h2>Search results for "{SearchQuery}"</h2>
+            {block:NoSearchResults}
+            <p><i>No posts matched your query. Tumblr's search function tends to be a little flaky, though, so you might want to try a <a href="https://encrypted.google.com?q=site%3Ajoeyschoblaska.com/post/%20{URLSafeSearchQuery}">Google site search</a> instead. Sorry; I know it's lame.</i></p>
+            {/block:NoSearchResults}
+          </div>
+        {/block:SearchPage}
+
+        {block:Posts}
+          {posts-text}
+          {posts-photo}
+          {posts-link}
+        {/block:Posts}
+
+        {pagination}
+      </div>
+
+      {footer}
+    </div>
+
+    {prettyjs}
+  </body>
+</html>

@@ -1,0 +1,14 @@
+{block:Link}
+  <div class="post-box">
+    <h3 class="link-title"><a href="{URL}" class="link" {Target}>{Name}</a></h3>
+    {block:Description}
+      {Description}
+    {/block:Description}
+    {block:Date}
+      <p><small>
+        {block:IndexPage}posted on <a href="{Permalink}">{Month} {DayOfMonth}, {Year}</a>{/block:IndexPage}
+        {block:PermalinkPage}posted on {Month} {DayOfMonth}, {Year}{/block:PermalinkPage}
+      </small></p>
+    {/block:Date}
+  </div>
+{/block:Link}
