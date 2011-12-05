@@ -11,8 +11,11 @@
       {prettycss}
       {customcss}
     </style>
+    <script type="text/javascript">
+      {prettyjs}
+    </script>
   </head>
-  <body>
+  <body onload="prettyPrint()">
     <div class="container">
       <div id="page-header">
         <form id="search-form" action="/search" method="get">
@@ -43,6 +46,5 @@
       {footer}
     </div>
 
-    {prettyjs}
   </body>
 </html>
