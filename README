@@ -1,1 +1,3 @@
-ruby compile.rb
+My tumblr theme, viewable at joeyschoblaska.com. Uses Twitter bootstrap as a CSS framework and Google Code Prettify for syntax highlighting.
+
+`ruby compile.rb` to rebuild compiled.html and copy it to the clipboard.
