@@ -64,6 +64,11 @@ pre {
   line-height: 18px;
   margin: 20px 0;
 }
+code {
+  background-color: #E9E9D8;
+  font-size: 14px;
+  margin: 0 3px;
+}
 
 .pajinashun { padding-top: 15px; }
 .pajinashun p.next { text-align: right; }
