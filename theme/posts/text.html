@@ -1,7 +1,8 @@
 {block:Text}
   <div class="post-box">
     {block:Title}
-      <h2><a href="{Permalink}">{Title}</a></h2>
+      {block:PermalinkPage}<h2>{Title}</h2>{/block:PermalinkPage}
+      {block:IndexPage}<h2><a href="{Permalink}">{Title}</a></h2>{/block:IndexPage}
     {/block:Title}
     {Body}
     {block:Date}
