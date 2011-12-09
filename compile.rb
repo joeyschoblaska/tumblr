@@ -15,7 +15,9 @@ substitutions = {
   /footer/ => 'theme/footer.html'
 }
 
-`cd bootstrap && make build && cp bootstrap.min.css ../css/`
+if ARGV.include?('--bootstrap')
+  `cd bootstrap && make build && cp bootstrap.min.css ../css/`
+end
 
 File.open("theme/theme.html") do |theme|
   File.open("compiled.html", "w") do |compiled|
